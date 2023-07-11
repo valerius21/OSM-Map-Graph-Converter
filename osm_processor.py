@@ -1,12 +1,12 @@
 import os
-
-import osmnx as ox
 import tempfile
+
 import geopandas
+import nanoid
+import osmnx as ox
+import redis
 from redis.commands.graph import Edge
 from redis.commands.graph.node import Node
-import redis
-import nanoid
 
 redis_uri = os.getenv('REDIS_URI', 'redis://0.0.0.0:6379/0')
 r = redis.from_url(redis_uri)

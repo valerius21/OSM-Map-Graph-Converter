@@ -8,8 +8,8 @@ services:
 
   fastapi-app:
     build:
-      context: backend
-      dockerfile: backend/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     environment:

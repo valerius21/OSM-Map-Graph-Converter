@@ -8,7 +8,8 @@ from redis.commands.graph.node import Node
 import redis
 import nanoid
 
-r = redis.Redis(host='0.0.0.0', port=6379, db=0)
+redis_uri = os.getenv('REDIS_URI', 'redis://0.0.0.0:6379/0')
+r = redis.from_url(redis_uri)
 
 
 def process_map(file_path: str):
@@ -46,6 +47,12 @@ def process_map(file_path: str):
         vertices.append(v_aa)
         vertices.append(v_bb)
         edges.append(e_ee)
+
+    # delete graph when done
+    graph.delete()
+    # delete graph file when done
+    if os.path.exists(g_path):
+        os.remove(g_path)
 
     return {
         'vertices': list(vertices),

@@ -12,7 +12,7 @@ Currently, only streets as edges are supported.
 ## Usage
 
 ```bash
-$ curl -d @example.osm http://localhost:8000/upload/ 
+$ curl -F file=@example.osm http://localhost:8000/upload/ 
 ```
 
 The processing can take a few minutes.

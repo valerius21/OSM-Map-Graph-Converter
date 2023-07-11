@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Mattfeld"
+  given-names: "Valerius"
+- family-names: "Vetter"
+  given-names: "Bianca"
+title: "OSM Map-to-Graph Converter"
+version: 0.0.0
+date-released: 2023-07-11
+url: "https://github.com/valerius21/OSM-Map-Graph-Converter"

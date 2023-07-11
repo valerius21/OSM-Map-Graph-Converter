@@ -1,0 +1,5 @@
+fastapi~=0.100.0
+redis~=4.6.0
+osmnx~=1.5.1
+geopandas~=0.13.2
+nanoid~=2.0.0

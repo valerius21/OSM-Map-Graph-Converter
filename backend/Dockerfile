@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code into the container
-COPY . .
+COPY .. .
 
 # Set the environment variable for Redis URI
 ENV REDIS_URI=${REDIS_URI}

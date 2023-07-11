@@ -5,9 +5,7 @@ services:
     image: redis/redis-stack-server:latest
 
   fastapi-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: valerius21/osm-map-graph-converter:latest
     ports:
       - "8000:8000"
     environment:

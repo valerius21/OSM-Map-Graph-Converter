@@ -30,4 +30,4 @@ async def upload_file(file: UploadFile = File(..., accept=".osm")):
         shutil.copyfileobj(file.file, tmp)
         print(tmp.name)
         graph_dict = process_map(tmp.name)
-    return {'filename': file.filename, 'size': len(graph_dict), 'graph': graph_dict}
+    return {'filename': file.filename, 'size': len(graph_dict['edges']) * 2, 'graph': graph_dict}

@@ -12,7 +12,7 @@ redis_uri = os.getenv('REDIS_URI', 'redis://0.0.0.0:6379/0')
 r = redis.from_url(redis_uri)
 
 
-def process_map(file_path: str):
+def process_map(file_path: str) -> dict:
     """Process the map file and return the graph."""
     g_path, graph, graph_index = preprocess_osm_file(file_path)
 

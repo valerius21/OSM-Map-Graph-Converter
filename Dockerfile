@@ -16,6 +16,9 @@ COPY . .
 # Set the environment variable for Redis URI
 ENV REDIS_URI=${REDIS_URI}
 
+# Install Uvicorn
+RUN pip install uvicorn
+
 # Expose the port your FastAPI app is listening on (replace 8000 with the actual port number if needed)
 EXPOSE 8000
 

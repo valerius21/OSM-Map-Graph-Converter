@@ -39,7 +39,7 @@ def process_map(file_path: str) -> dict:
             'from': ee.properties['u'],
             'to': ee.properties['v'],
             'length': ee.properties['length'],
-            'max_speed': ee.properties['maxspeed'],
+            'max_speed': float(ee.properties['maxspeed']),
             'name': ee.properties['name'] or '',
             'osm_id': ee.properties['osmid'] or '',
         }

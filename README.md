@@ -32,7 +32,7 @@ The processing can take a few minutes.
   "from":208650206,
   "to":277409422,
   "length":7.829,
-  "max_speed":"30",
+  "max_speed": 30.0,
   "name":"Waageplatz",
   "osm_id":"24827765"
 }
